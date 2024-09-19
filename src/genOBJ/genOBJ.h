@@ -11,17 +11,25 @@
 #include <genOBJ/math.h>
 
 class genOBJ {
-private:
-    bool init();
-    void processEvent();
-    void run();
-
 public:
     genOBJ();
     ~genOBJ();
+
     bool loadOBJ(const char* filename, const char* path);
+    bool init(const char* name, int width, int height);
+    void run();
+
 
 private:
+    void processEvent();
+    void render();
+    void clean();
+    void update();
+
+private:
+    int width, height;
+    GLFWwindow* window = nullptr;
+
 
 };
 
