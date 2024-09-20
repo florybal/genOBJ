@@ -7,6 +7,9 @@
 int main(int argc, char** argv)
 {
     genOBJ obj;
+    obj.init("GenOBJS", 480, 320);
+    //obj.loadOBJ();
+    obj.run();
 
     return 0;
 }
